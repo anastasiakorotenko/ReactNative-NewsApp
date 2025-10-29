@@ -30,7 +30,7 @@ export default function NewsDetailScreen({ route, navigation }) {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.header}>
-        <Text style={styles.headerTitle}>Настройки</Text>
+        <Text style={styles.headerTitle}>{news.title}</Text>
       </View>
 
       <ScrollView

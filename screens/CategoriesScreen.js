@@ -85,7 +85,7 @@ export default function CategoriesScreen() {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.header}>
-        <Text style={styles.headerTitle}>Настройки</Text>
+        <Text style={styles.headerTitle}>Категории</Text>
       </View>
 
       <FlatList
