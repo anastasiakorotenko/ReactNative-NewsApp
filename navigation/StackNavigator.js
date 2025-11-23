@@ -1,14 +1,29 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import NewsListScreen from "../screens/NewsListScreen";
 import NewsDetailScreen from "../screens/NewsDetailScreen";
+import SettingsScreen from "../screens/SettingsScreen";
+import TabNavigator from "./TabNavigator";
 
 const Stack = createNativeStackNavigator();
 
-export default function StackNavigator() {
+const StackNavigator = () => {
   return (
-    <Stack.Navigator screenOptions={{ headerShown: false }}>
-      <Stack.Screen name="NewsList" component={NewsListScreen} />
-      <Stack.Screen name="NewsDetail" component={NewsDetailScreen} />
+    <Stack.Navigator>
+      <Stack.Screen
+        name="MainTabs"
+        component={TabNavigator}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="NewsDetail"
+        component={NewsDetailScreen}
+        options={{ title: "Детали новости" }}
+      />
+      <Stack.Screen
+        name="Settings"
+        component={SettingsScreen}
+        options={{ title: "Настройки" }}
+      />
     </Stack.Navigator>
   );
-}
+};
+export default StackNavigator;

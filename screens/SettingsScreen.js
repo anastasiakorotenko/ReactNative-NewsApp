@@ -16,9 +16,6 @@ export default function SettingsScreen({ navigation }) {
 
   return (
     <SafeAreaView style={styles.safeArea}>
-      <View style={styles.header}>
-        <Text style={styles.headerTitle}>Настройки</Text>
-      </View>
 
       <ScrollView contentContainerStyle={styles.container}>
         <View style={styles.section}>
@@ -93,13 +90,6 @@ const styles = StyleSheet.create({
   container: {
     paddingBottom: 40,
   },
-  header: {
-    height: 60,
-    justifyContent: "center",
-    alignItems: "center",
-    backgroundColor: "#ababe8ff",
-  },
-  headerTitle: { color: "#fff", fontSize: 20, fontWeight: "bold" },
   section: {
     marginVertical: 10,
     paddingHorizontal: 16,
